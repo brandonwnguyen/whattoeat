@@ -1,0 +1,56 @@
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../static/wte.css">
+
+</head>
+
+<body>
+
+<div style = "height : 10%">
+</div>
+
+<div class = "window" align = "center" style = "margin:0 auto; width:50%; background-color: rgba(255, 255, 255, .8) ; padding : 10px">
+	<div class="restaurant-title">
+<h1 class = "restaurant-title">
+{{business['name']}}
+</h1></div>
+
+<h2>
+	<img src={{business['image_url']}} style = "width : 300px"> </br> </br>
+	<img src={{business['rating_img_url_large']}}> </br> </br>
+	{{",".join(business['location']['display_address'])}}</br> 
+	{{business['display_phone']}} </br>
+	"{{business['snippet_text']}}" </br>
+	</h2>
+
+<div align = "center">
+<form action="search" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1"></label>
+    <input name = "location" type="hidden" class="form-control" id="exampleInputEmail1" value="{{location}}">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"></label>
+    <input name = "genre" type="hidden" class="form-control" id="exampleInputPassword1" value="{{genre}}">
+  </div>
+  </div>
+  <button type="submit" class="btn btn-danger">Next</button>
+</form>
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>

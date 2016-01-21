@@ -1,0 +1,23 @@
+.title {
+	font-family: 'Pacifico', cursive;
+	font-size: 60px;
+	color: #FFD200;
+	text-shadow: 2px 2px #969696;
+}
+
+.vis {
+	position: fixed;
+	top: 300px;
+}
+
+.window {
+	border-radius: 25px;
+}
+
+.restaurant-title {
+	font-family: 'Varela Round', sans-serif;
+	text-shadow: 2px 2px #FFFFFF;
+}
+body {
+	background-image: url("images/sfskyline.jpg");
+}
